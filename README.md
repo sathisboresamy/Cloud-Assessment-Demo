@@ -22,7 +22,8 @@ The above usecases are achieved and will be demonstrated using Microsoft Azure ,
 
  The below diagram depicts for the Usecase 1 & 2 Azure Cloud infrastructure  
 
-![High Level Diagram](https://user-images.githubusercontent.com/64807348/194583984-c563b55c-a644-44e5-bab7-b07a2b70bdc9.PNG)
+![AzureCloud](https://user-images.githubusercontent.com/64807348/194598261-4ab6a1c3-b415-4ba1-8e1e-e392b0243679.PNG)
+
 
 
 # Usecase 1 : VM  provisioning with webserver/application deployment
