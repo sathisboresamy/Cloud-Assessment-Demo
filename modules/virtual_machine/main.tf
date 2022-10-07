@@ -78,6 +78,20 @@ resource "azurerm_storage_account" "bootdiagsta" {
   account_replication_type = "LRS"
   min_tls_version          = "TLS1_2"
   tags                     = local.bootstatags
+  blob_properties {
+
+    versioning_enabled = true
+  }
+
+   queue_properties  {
+     logging {
+         delete                = true
+         read                  = true
+         write                 = true
+         version               = "1.0"
+         retention_policy_days = 10
+     }
+   }
 }
 
 # Create Storage acccount with Versioning 
@@ -95,6 +109,15 @@ resource "azurerm_storage_account" "staforversion" {
 
     versioning_enabled = true
   }
+  queue_properties  {
+     logging {
+         delete                = true
+         read                  = true
+         write                 = true
+         version               = "1.0"
+         retention_policy_days = 10
+     }
+   }
 }
 
 resource "azurerm_storage_container" "contain" {
