@@ -63,7 +63,7 @@ resource "azurerm_subnet" "demosbt" {
   resource_group_name  = var.resource_group_name
 }
 
-# Moudle-4 : Security Group, Rules Creation and Associate with Subnet
+# Module-4 : Security Group, Rules Creation and Associate with Subnet
 
 resource "azurerm_network_security_group" "demonsg" {
   name                = var.network_security_group
