@@ -24,7 +24,7 @@ resource "azurerm_windows_virtual_machine" "dmowep-win2016" {
   network_interface_ids = [azurerm_network_interface.demonic.id]
 
   os_disk {
-    name                 = var.vmname1
+    name                 = "${var.vmname1}-OsDisk01"
     caching              = "ReadWrite"
     storage_account_type = var.storage_account_type
 
@@ -42,9 +42,11 @@ resource "azurerm_windows_virtual_machine" "dmowep-win2016" {
   }
 
   tags = local.vmtags
+  depends_on = [azurerm_storage_account.bootdiagsta]
+  
 }
 resource "azurerm_network_interface" "demonic" {
-  name                = var.network_interface_ids
+  name                = "${var.vmname1}-nic01"
   location            = var.location
   resource_group_name = var.resource_group_name
 
