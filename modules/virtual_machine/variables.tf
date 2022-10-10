@@ -1,6 +1,5 @@
 variable "vmname1" {
   type        = string
-  default     = "dmowep-win2016"
   description = "Name of the Virtual Machine"
 }
 variable "size" {
