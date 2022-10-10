@@ -278,7 +278,7 @@ SETTINGS
 
 -  Allow 443 port, Source & Destinatin ANY in Network security group created as part of the use case-1. This will ensure to access the web site using secure http(s)port 443 from internet.
                        
--  Azure Automation Account & PowerShell script to check compliance on the VM disk encryption , network security group allowed only http(s) , IIS logs redirected to Log analytics work space,Storage account versioning & logging
+-  Azure Automation Account & PowerShell script to check compliance on the VM disk encryption , network security group allowed only http(s) , IIS logs redirected to Log analytics work space,Storage account versioning & logging.
                      
                  
                     
