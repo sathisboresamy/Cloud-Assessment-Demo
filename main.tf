@@ -38,12 +38,12 @@ module "virtual_machine" {
   depends_on          = [module.subnet]
 }
 
-#resource "time_sleep" "wait_seconds1" {
- # create_duration = "120s"
-#}
+resource "time_sleep" "wait_seconds1" {
+ create_duration = "420s"
+}
 module "app_deployment" {
 
   source     = "./modules/app_code_deployment"
   vm_id      = module.virtual_machine.vms_id
-  depends_on = [module.virtual_machine]
+  depends_on = [time_sleep.wait_seconds1,module.virtual_machine]
 }
